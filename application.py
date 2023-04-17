@@ -1,5 +1,5 @@
 from flask import Flask,request,render_template,jsonify
-from src.pipelines.prediction_pipeline  import CustomData,PredictPipeline
+#from src.pipelines.prediction_pipeline  import CustomData,PredictPipeline
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
@@ -17,9 +17,9 @@ def predict_datapoint():
     if request.method=='GET':
         return render_template('form.html')
     else:
-        result=10
+        pass
 
-    return render_template('result.html',final_result=result)
+    return render_template('result.html')
 
 if __name__ =="__main__":
     application.run(host='0.0.0.0')
