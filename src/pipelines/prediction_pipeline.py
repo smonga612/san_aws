@@ -25,6 +25,7 @@ class PredictPipeline:
             logging.info("Exception occured in prediction")
             raise CustomException(e,sys)
 """
+'''
 class CustomData:
     def __init__(self,carat:float,depth:float,table:float,x:float,y:float,z:float,cut:str,color:str,clarity:str):
         self.carat=carat
@@ -57,3 +58,4 @@ class CustomData:
         except Exception as e:
             logging.info('Exception Occured in getdata frame')
             raise CustomException(e,sys)
+'''
