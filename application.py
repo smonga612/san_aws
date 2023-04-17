@@ -1,5 +1,5 @@
 from flask import Flask,request,render_template,jsonify
-from src.pipelines.prediction_pipeline import CustomData
+from src.pipelines.prediction_pipeline import CustomData, PredictPipeline
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
@@ -33,3 +33,9 @@ def predict_datapoint():
     result=round(pred[0],2)
 
     return render_template('result.html',final_result=result)
+
+if __name__ =="__main__":
+    application.run(host='0.0.0.0')
+
+
+

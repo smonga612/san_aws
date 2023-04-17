@@ -1,0 +1,21 @@
+[ 2023-04-17 23:41:46,784 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.78:5000
+[ 2023-04-17 23:41:46,784 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-04-17 23:41:55,887 ] 224 werkzeug - INFO - 192.168.29.78 - - [17/Apr/2023 23:41:55] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-17 23:42:10,295 ] 56 root - INFO - Data Frame Gathered
+[ 2023-04-17 23:42:10,295 ] 1744 application - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "c:\pythoncode\houseprice\venv\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\pythoncode\houseprice\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\pythoncode\houseprice\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\pythoncode\houseprice\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "application.py", line 31, in predict_datapoint
+    predict_pipeline=PredictPipeline()
+NameError: name 'PredictPipeline' is not defined
+[ 2023-04-17 23:42:10,301 ] 224 werkzeug - INFO - 192.168.29.78 - - [17/Apr/2023 23:42:10] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
