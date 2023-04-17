@@ -17,6 +17,7 @@ def predict_datapoint():
     if request.method=='GET':
         return render_template('form.html')
     else:
+        '''
         data=CustomData(
             carat=float(request.form.get('carat')),
             depth=float(request.form.get('depth')),
@@ -29,6 +30,7 @@ def predict_datapoint():
             clarity=request.form.get('clarity')
 
             )
+            '''
     """"
     final_df=data.get_data_as_dataframe()
     predict_pipeline=PredictPipeline()
