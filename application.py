@@ -1,5 +1,5 @@
 from flask import Flask,request,render_template,jsonify
-from src.pipelines.prediction_pipeline import PredictPipeline
+#from src.pipelines.prediction_pipeline import PredictPipeline
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
