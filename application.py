@@ -3,7 +3,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def index():
-    return "Your Flask App Works!"
+    return "<h1>My application is work fine<h1>"
 
 @application.route("/hello")
 def hello():
