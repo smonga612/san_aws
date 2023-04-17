@@ -5,7 +5,7 @@ from src.logger import logging
 from src.utils import load_object
 import pandas as pd
 
-
+""""
 class PredictPipeline:
     def __init__(self):
         pass
@@ -24,7 +24,7 @@ class PredictPipeline:
         except Exception  as e:
             logging.info("Exception occured in prediction")
             raise CustomException(e,sys)
-
+"""
 class CustomData:
     def __init__(self,carat:float,depth:float,table:float,x:float,y:float,z:float,cut:str,color:str,clarity:str):
         self.carat=carat
