@@ -39,15 +39,15 @@ class CustomData:
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict={
-                'carat':[self.carat],
-                'depth':[self.depth],
-                'table':[self.table],
-                'x':[self.x],
-                'y':[self.y],
-                'z':[self.y],
-                'cut':[self.cut],
-                'color':[self.color],
-                'clarity':[self.clarity]
+                "carat":[self.carat],
+                "depth":[self.depth],
+                "table":[self.table],
+                "x":[self.x],
+                "y":[self.y],
+                "z":[self.y],
+                "cut":[self.cut],
+                "color":[self.color],
+                "clarity":[self.clarity],
 
             }
 
