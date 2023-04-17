@@ -1,14 +1,22 @@
-from flask import Flask
-application = Flask(__name__)
+from flask import Flask,request,render_template,jsonify
+#from src.piplines.predicition_pipeline import CustomData,PredictPipeline
+#from src.piplines.training_pipeline
 
-@application.route("/")
-def index():
-    return "<h1>My application is work fine<h1>"
-
-@application.route("/hello")
-def hello():
-    return "Hello World!"
+application=Flask(__name__)
 
 
-if __name__ == "__main__":
-    application.run(port=5000, debug=True)
+@application.route('/')
+def home_page():
+    return render_template('index.html')
+
+@application.route('/predict',methods=['GET','POST'])
+def predict_datapoint():
+    if request.method=='GET':
+        return render_template('form.html')
+    else:
+        result=1
+
+    return render_template('result.html',final_result=result)
+
+if __name__ =="__main__":
+    application.run(host='0.0.0.0')
