@@ -6,4 +6,8 @@ MarkupSafe==1.1.1
 Werkzeug==0.16.0
 numpy
 pandas
--e .
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
