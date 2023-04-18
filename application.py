@@ -11,7 +11,7 @@ sys.path.append("/var/app/current/src/pipelines")
 
 application=Flask(__name__)
 
-results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current", '*.*'))]
+results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current/src", '*.*'))]
 @application.route('/')
 def home_page():
     return render_template('index.html',path=results)
