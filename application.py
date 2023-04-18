@@ -4,17 +4,17 @@ import glob
 
 from flask import Flask,request,render_template
 from pathlib import Path
-sys.path.append("/var/app/current/src/pipelines")
+#sys.path.append("/var/app/current/src/pipelines")
 
 from src.pipelines.prediction_pipeline import PredictPipeline, CustomData
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
 
-results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current/src/pipelines", '*.*'))]
+#results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current/src/pipelines", '*.*'))]
 @application.route('/')
 def home_page():
-    return render_template('index.html',path=results)
+    return render_template('index.html')
 
 @application.route('/predict',methods=['GET','POST'])
 def predict_datapoint():
