@@ -14,12 +14,12 @@ class PredictPipeline:
         try:
            preprocessor_path=os.path.join('artifacts','preprocessor.pk1')
            model_path=os.path.join('artifacts','model.pk1')
-           preprocessor=load_object(file_path=preprocessor_path)
-           model=load_object(file_path=model_path)
+           preprocessor=load_object(preprocessor_path)
+           #model=load_object(file_path=model_path)
 
-           data_scaled=preprocessor.transform(features)
+           #data_scaled=preprocessor.transform(features)
 
-           pred=model.predict(data_scaled)
+           #pred=model.predict(data_scaled)
            return 1
             
 
