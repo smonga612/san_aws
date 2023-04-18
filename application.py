@@ -24,7 +24,7 @@ def predict_datapoint():
         carat=float(request.form.get('carat'))
     
     
-        '''
+        
         data=CustomData(
             
             carat=float(request.form.get('carat')),
@@ -35,7 +35,7 @@ def predict_datapoint():
             z=float(request.form.get('z')),
             cut=request.form.get('cut'),
             color=request.form.get('color'),
-            clarity=request.form.get('clarity')
+            clarity=request.form.get('clarity'),
 
             )
             
@@ -43,7 +43,7 @@ def predict_datapoint():
     predict_pipeline=PredictPipeline()
     pred=predict_pipeline.predict(final_df)
     result=round(pred[0],2)
-    '''
+    
     return render_template('result.html',final_result=carat)
 
 if __name__ =="__main__":
