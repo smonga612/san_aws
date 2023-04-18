@@ -2,7 +2,7 @@ import os
 import sys
 import glob
 
-from flask import Flask,request,render_template,jsonify
+from flask import Flask,request,render_template
 from pathlib import Path
 sys.path.append("/var/app/current/src/pipelines")
 
