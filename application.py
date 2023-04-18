@@ -1,5 +1,9 @@
+import os
+import sys
+
 from flask import Flask,request,render_template,jsonify
-from src.components.data_transformation import DataTransformation
+sys.path.append("/opt/python/current/application/san_aws_1/src/pipelines")
+from pipelines import DataTransformation
 #from src.pipelines.prediction_pipeline import PredictPipeline
 #from src.piplines.training_pipeline
 
