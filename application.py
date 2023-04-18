@@ -3,7 +3,7 @@ import sys
 
 from flask import Flask,request,render_template,jsonify
 from pathlib import Path
-#sys.path.append("/opt/python/current/application/san_aws_1/src/pipelines")
+sys.path.append("/opt/python/current/application/san_aws_1/src/pipelines")
 #from pipelines import DataTransformation
 #from src.pipelines.prediction_pipeline import PredictPipeline
 #from src.piplines.training_pipeline
@@ -13,7 +13,7 @@ application=Flask(__name__)
 
 @application.route('/')
 def home_page():
-    return render_template('index.html',path=Path.cwd())
+    return render_template('index.html',path=sys.path)
 
 @application.route('/predict',methods=['GET','POST'])
 def predict_datapoint():
