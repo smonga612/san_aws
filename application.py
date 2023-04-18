@@ -51,7 +51,7 @@ def predict_datapoint():
             )
     '''        
     final_df=data.get_data_as_dataframe()
-   # predict_pipeline=PredictPipeline()
+    predict_pipeline=PredictPipeline()
     #pred=predict_pipeline.predict(final_df)
     #result=round(pred[0],2)
     
