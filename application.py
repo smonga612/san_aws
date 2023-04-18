@@ -21,10 +21,19 @@ def predict_datapoint():
     if request.method=='GET':
         return render_template('form.html')
     else:
-        carat=float(request.form.get('carat'))
+        carat=float(request.form.get('carat'))        
+        depth=float(request.form.get('depth')),
+        table=float(request.form.get('table')),
+        x=float(request.form.get('x')),
+        y=float(request.form.get('y')),
+        z=float(request.form.get('z')),
+        cut=request.form.get('cut'),
+        color=request.form.get('color'),
+        clarity=request.form.get('clarity')
+
     
     
-        
+        ''' 
         data=CustomData(
             
             carat=float(request.form.get('carat')),
@@ -35,7 +44,7 @@ def predict_datapoint():
             z=float(request.form.get('z')),
             cut=request.form.get('cut'),
             color=request.form.get('color'),
-            clarity=request.form.get('clarity'),
+            clarity=request.form.get('clarity')
 
             )
             
@@ -43,8 +52,9 @@ def predict_datapoint():
     predict_pipeline=PredictPipeline()
     pred=predict_pipeline.predict(final_df)
     result=round(pred[0],2)
+    '''
     
-    return render_template('result.html',final_result=carat)
+    return render_template('result.html',final_result=depth)
 
 if __name__ =="__main__":
     application.run(host='0.0.0.0')
