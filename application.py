@@ -6,7 +6,7 @@ from flask import Flask,request,render_template,jsonify
 from pathlib import Path
 sys.path.append("/var/app/current/src/pipelines")
 
-from pipelines.prediction_pipeline import PredictPipeline, CustomData
+from src.pipelines.prediction_pipeline import PredictPipeline, CustomData
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
