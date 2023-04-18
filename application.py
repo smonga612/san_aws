@@ -1,19 +1,20 @@
 import os
 import sys
+import glob
 
 from flask import Flask,request,render_template,jsonify
 from pathlib import Path
 sys.path.append("/var/app/current/src/pipelines")
-from pipelines.prediction_pipeline import PredictPipeline
+
 #from src.pipelines.prediction_pipeline import PredictPipeline
 #from src.piplines.training_pipeline
 
 application=Flask(__name__)
 
-
+results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current", '*.*'))]
 @application.route('/')
 def home_page():
-    return render_template('index.html',path=sys.path)
+    return render_template('index.html',path=results)
 
 @application.route('/predict',methods=['GET','POST'])
 def predict_datapoint():
