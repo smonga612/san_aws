@@ -56,7 +56,7 @@ def predict_datapoint():
     #result=round(pred[0],2)
     
     
-    return render_template('result.html',final_result=depth)
+    return render_template('result.html',final_result=carat)
 
 if __name__ =="__main__":
     application.run(host='0.0.0.0')
