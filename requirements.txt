@@ -11,3 +11,4 @@ matplotlib
 scikit-learn
 catboost
 xgboost
+-e .
