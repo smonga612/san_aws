@@ -3,8 +3,8 @@ import sys
 
 from flask import Flask,request,render_template,jsonify
 from pathlib import Path
-sys.path.append("/opt/python/current/application/san_aws_1/src/pipelines")
-#from pipelines import DataTransformation
+sys.path.append("/var/app/current/src/pipelines")
+from pipelines.prediction_pipeline import PredictPipeline
 #from src.pipelines.prediction_pipeline import PredictPipeline
 #from src.piplines.training_pipeline
 
