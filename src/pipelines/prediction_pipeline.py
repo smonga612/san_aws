@@ -21,8 +21,8 @@ class PredictPipeline:
            
            data_scaled=preprocessor.transform(features)
 
-           #pred=model.predict(data_scaled)
-           return features
+           pred=model.predict(data_scaled)
+           return pred
             
 
         except Exception as e:
