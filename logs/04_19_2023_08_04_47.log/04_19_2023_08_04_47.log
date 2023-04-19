@@ -1,0 +1,26 @@
+[ 2023-04-19 08:04:48,486 ] 23 root - INFO - Data Ingestion methods starts
+[ 2023-04-19 08:04:48,604 ] 26 root - INFO - Dataset read as pandas DataFrame
+[ 2023-04-19 08:04:50,205 ] 29 root - INFO - Train test split
+[ 2023-04-19 08:04:50,741 ] 35 root - INFO - Ingestion of Data is Completed
+[ 2023-04-19 08:04:50,866 ] 76 root - INFO - Read train and test data completed
+[ 2023-04-19 08:04:50,866 ] 77 root - INFO - Train Dataframe Head : 
+        id  carat        cut color clarity  depth  table     x     y     z  price
+0  160942   0.51      Ideal     F      IF   62.1   54.0  5.13  5.16  3.19   1899
+1  127341   0.32    Premium     G     VS2   59.8   58.0  4.46  4.49  2.67    720
+2  104577   0.70  Very Good     E     SI1   62.5   57.0  5.66  5.68  3.54   2318
+3  108292   1.52  Very Good     F     VS1   63.3   53.0  7.30  7.35  4.64  10217
+4   34108   1.23      Ideal     G    VVS1   62.3   56.0  6.82  6.85  4.24  11873
+[ 2023-04-19 08:04:50,866 ] 78 root - INFO - Test Dataframe Head : 
+        id  carat      cut color clarity  depth  table     x     y     z  price
+0   33428   1.06    Ideal     G     VS1   61.7   57.0  6.53  6.57  4.06   7589
+1  153320   1.52    Ideal     G     VS1   61.6   56.0  7.38  7.36  4.54  13016
+2   31813   0.34  Premium     E     VS1   61.0   60.0  4.52  4.46  2.73    956
+3   15264   0.50  Premium     E     SI1   62.9   58.0  5.08  5.04  3.17   1433
+4   35845   0.31    Ideal     E     VS2   61.8   56.0  4.34  4.37  2.69    673
+[ 2023-04-19 08:04:50,866 ] 80 root - INFO - Obtaining preprocessing object
+[ 2023-04-19 08:04:50,866 ] 28 root - INFO - Data Transformation Initiated
+[ 2023-04-19 08:04:50,866 ] 39 root - INFO - Pipeline Initiated
+[ 2023-04-19 08:04:50,866 ] 63 root - INFO - Pipeline Completed
+[ 2023-04-19 08:04:50,866 ] 92 root - INFO - Applying preprocessing object on training and testing datasets
+[ 2023-04-19 08:04:51,100 ] 100 root - INFO - Before save_object
+[ 2023-04-19 08:04:51,100 ] 106 root - INFO - preprocessor pickle file saved
