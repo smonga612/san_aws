@@ -9,14 +9,14 @@ from pathlib import Path
 from src.pipelines.prediction_pipeline import PredictPipeline, CustomData
 #from src.piplines.training_pipeline
 
-application=Flask(__name__)
+app=Flask(__name__)
 
 #results = [os.path.basename(f) for f in glob.glob(os.path.join("/var/app/current/src/pipelines", '*.*'))]
-@application.route('/')
+@app.route('/')
 def home_page():
     return render_template('index.html')
 
-@application.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
         return render_template('form.html')
@@ -59,7 +59,7 @@ def predict_datapoint():
     return render_template('result.html',final_result=result)
 
 if __name__ =="__main__":
-    application.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
 
 
 
