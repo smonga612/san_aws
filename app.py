@@ -31,7 +31,7 @@ def predict_datapoint():
         color=request.form.get('color')
         clarity=request.form.get('clarity')
 
-        data=CustomData(carat,depth,table,x,y,z,cut,color,clarity)
+        data=CustomData(carat,depth,table,cut,color,clarity)
 
     
     
